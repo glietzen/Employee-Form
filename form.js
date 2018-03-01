@@ -19,6 +19,9 @@ $(document).ready(function () {
     var role = '';
     var startDate = '';
     var monthlyRate = '';
+    var monthsWorked = '';
+    var now = moment();
+    var momentStartDate = moment(startDate);
 
     $('#submit-button').on('click', function () {
         event.preventDefault();
@@ -50,10 +53,16 @@ $(document).ready(function () {
             role = snapshot.val().role;
             startDate = snapshot.val().startDate;
             monthlyRate = snapshot.val().monthlyRate;
-            newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td></td><td>' + monthlyRate + '</td>';
-            $('#table-body').append(newRow);
+           
+            var monthsWorked = '';
+            var now = moment();
+            var momentStartDate = moment(startDate);
+            
             console.log(newRow);
-
+            monthsWorked = momentStartDate.diff(now, 'months')*-1;
+            console.log(monthsWorked);
+            newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td>' + monthsWorked + '</td><td>' + monthlyRate + '</td>';
+            $('#table-body').append(newRow);
         });
         
 });
