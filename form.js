@@ -25,19 +25,19 @@ $(document).ready(function () {
 
                 employeeName = $('#name-input').val().trim();
                 role = $('#role-input').val().trim();
-                startDate = $('#start-input').val();
-                monthlyRate = $('#monthly-input').val();
+                startDate = $('#startDate-input').val();
+                monthlyRate = $('#rate-input').val();
 
                 
 
                 console.log(employeeName, role, startDate, monthlyRate);
 
-                database.ref('/employeeData').push({
-                        employeeName: employeeName,
-                        role: role,
-                        startDate: startDate,
-                        monthlyRate: monthlyRate
-                });
+                // database.ref('/employeeData').push({
+                //         employeeName: employeeName,
+                //         role: role,
+                //         startDate: startDate,
+                //         monthlyRate: monthlyRate
+                // });
 
                 newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td>' + monthlyRate + '</td>';
 
