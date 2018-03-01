@@ -16,7 +16,7 @@ $(document).ready(function () {
 
         console.log(employeeName, role, startDate, monthlyRate);
 
-        newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + '<td>' + startDate + '</td><td>' + '<td>' + monthlyRate + '</td><td>'
+        newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td>' + '<td>' + monthlyRate + '</td><td>'
 
         $('#table-body').append(newRow);
     })
