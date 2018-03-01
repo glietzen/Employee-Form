@@ -44,7 +44,7 @@ $(document).ready(function () {
         $('#table-body').append(newRow);
     })
 
-    function getData () {
+    
         database.ref('/employeeData').on('child_added', function (snapshot) {
             employeeName = snapshot.val().employeeName;
             role = snapshot.val().role;
@@ -54,6 +54,6 @@ $(document).ready(function () {
             $('#table-body').append(newRow);
             console.log(newRow);
 
-        })}
-        getData();
+        });
+        
 });
