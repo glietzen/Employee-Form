@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     function getData () {
         database.ref('/employeeData').on('child_added', function (snapshot) {
-            employeeName = snapshot.val().name;
+            employeeName = snapshot.val().employeeName;
             role = snapshot.val().role;
             startDate = snapshot.val().startDate;
             monthlyRate = snapshot.val().monthlyRate;
