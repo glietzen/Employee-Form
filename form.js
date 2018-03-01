@@ -32,12 +32,12 @@ $(document).ready(function () {
 
                 console.log(employeeName, role, startDate, monthlyRate);
 
-                // database.ref('/employeeData').push({
-                //         employeeName: employeeName,
-                //         role: role,
-                //         startDate: startDate,
-                //         monthlyRate: monthlyRate
-                // });
+                database.ref('/employeeData').push({
+                        employeeName: employeeName,
+                        role: role,
+                        startDate: startDate,
+                        monthlyRate: monthlyRate
+                });
 
                 newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td>' + monthlyRate + '</td>';
 
