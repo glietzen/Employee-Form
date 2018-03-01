@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-        var database = firebase.database();
+       
         // Initialize Firebase
         var config = {
                 apiKey: "AIzaSyCWHVsprbzdNVZE21_iII6YwDs3vaTr2m8",
@@ -11,6 +11,8 @@ $(document).ready(function () {
                 messagingSenderId: "305383994479"
         };
         firebase.initializeApp(config);
+
+        var database = firebase.database();
 
         var newRow = '';
         var employeeName = '';
@@ -35,7 +37,7 @@ $(document).ready(function () {
                         role: role,
                         startDate: startDate,
                         monthlyRate: monthlyRate
-                })
+                });
 
                 newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td>' + monthlyRate + '</td>';
 
