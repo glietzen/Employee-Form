@@ -50,7 +50,7 @@ $(document).ready(function () {
             role = snapshot.val().role;
             startDate = snapshot.val().startDate;
             monthlyRate = snapshot.val().monthlyRate;
-            newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td>' + monthlyRate + '</td>';
+            newRow = '<tr><td>' + employeeName + '</td><td>' + role + '</td><td>' + startDate + '</td><td></td><td>' + monthlyRate + '</td>';
             $('#table-body').append(newRow);
             console.log(newRow);
 
